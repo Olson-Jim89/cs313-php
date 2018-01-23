@@ -1,0 +1,42 @@
+h1,h2,h3,h4,h5,h6,h7{
+	font-family:"Verdana";
+
+}
+
+p{
+	font-family:"Palatino"; 
+}
+
+body {
+	margin: 0px; /* https://stackoverflow.com/questions/14288744/make-css-nav-bar-cover-top */
+	padding: 0px;
+}
+
+header {
+	width: 100%;
+	background-color: #395e60;
+	color: white;
+	padding: 5px;
+	padding-left: 20px;
+	text-shadow: 2px 2px black;
+}
+
+.content {
+	padding-left: 50px;
+}
+
+li{
+	margin-bottom:5px;
+	list-style-type: none;
+}
+
+.piclink{
+	
+	border: 5px solid white;
+}
+
+.piclink:hover{
+	
+	border: 5px solid gray;
+	
+}
