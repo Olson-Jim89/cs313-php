@@ -11,6 +11,7 @@
 				$user = 'postgres';
 				$password = 'SkyGate4567!';
 				$db = new PDO('pgsql:host=127.0.0.1;dbname=notes', $user, $password);
+				echo 'Connection Established...';
 			}
 			catch (PDOException $ex)
 			{
