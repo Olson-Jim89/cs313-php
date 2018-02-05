@@ -12,6 +12,7 @@
 				$password = 'SkyGate4567!';
 				$db = new PDO('pgsql:host=127.0.0.1;dbname=notes', $user, $password);
 				echo 'Connection Established...';
+				echo '<br/>';
 			}
 			catch (PDOException $ex)
 			{
@@ -25,6 +26,11 @@ foreach ($db->query('SELECT username, password FROM note_user') as $row)
   echo ' password: ' . $row['password'];
   echo '<br/>';
 }
+
+
+$statement = $db->query('SELECT username, password FROM note_user');
+$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
 		?>
 	</body>
 </html>
