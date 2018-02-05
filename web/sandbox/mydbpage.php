@@ -4,6 +4,7 @@
 		<title> Data Base Test</title>
 	</head>
 	<body>
+		<h1>test</h1>
 		<?php
 			try
 			{
