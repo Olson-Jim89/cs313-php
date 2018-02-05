@@ -19,7 +19,7 @@
 				echo 'Error!: ' . $ex->getMessage();
 				die();
 			}
-			
+/'			
 foreach ($db->query('SELECT username, password FROM note_user') as $row)
 {
   echo 'user: ' . $row['username'];
@@ -36,7 +36,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 
 $statement = $db->query('SELECT username, password FROM note_user');
 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-
+'/
 
 $stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
