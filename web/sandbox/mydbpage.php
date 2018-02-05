@@ -6,7 +6,7 @@
 	<body>
 		<h1>test</h1>
 		<?php
-			// default Heroku Postgres configuration URL
+// default Heroku Postgres configuration URL
 $dbUrl = getenv('DATABASE_URL');
 
 if (empty($dbUrl)) {
@@ -35,11 +35,19 @@ catch (PDOException $ex) {
  die();
 }
 
+foreach ($db->query('SELECT username, password FROM note_user') as $row)
+{
+  echo 'user: ' . $row['username'];
+  echo ' password: ' . $row['password'];
+  echo '<br/>';
+}
+
+/*
 foreach ($db->query('SELECT now()') as $row)
 {
  print "<p>$row[0]</p>\n\n";
 }
-
+*/
 
 /*
 			try
@@ -57,12 +65,7 @@ foreach ($db->query('SELECT now()') as $row)
 			}
 			*/
 
-foreach ($db->query('SELECT username, password FROM note_user') as $row)
-{
-  echo 'user: ' . $row['username'];
-  echo ' password: ' . $row['password'];
-  echo '<br/>';
-}
+
 
 
 $statement = $db->query('SELECT username, password FROM note_user');
