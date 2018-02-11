@@ -8,9 +8,7 @@
 				margin-left: 40px;
 				list-style-type: none;
 			} 
-			li{
-				
-			}
+
 		</style>
 	</head>
 	<body>
