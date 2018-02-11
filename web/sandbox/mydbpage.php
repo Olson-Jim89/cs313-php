@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Data Base Test</title>
+		<title> Scripture Resources</title>
 	</head>
 	<body>
-		<h1>test</h1>
+		<h1>Scripture Resources</h1>
 		<?php
+/*
 // default Heroku Postgres configuration URL
 $dbUrl = getenv('DATABASE_URL');
 
@@ -35,12 +36,7 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT username, password FROM note_user') as $row)
-{
-  echo 'user: ' . $row['username'];
-  echo ' password: ' . $row['password'];
-  echo '<br/>';
-}
+
 
 /*
 foreach ($db->query('SELECT now()') as $row)
@@ -49,13 +45,13 @@ foreach ($db->query('SELECT now()') as $row)
 }
 */
 
-/*
+
 			try
 			{
 				$user = 'postgres';
 				$password = 'SkyGate4567!';
-				$db = new PDO('pgsql:host=127.0.0.1;dbname=notes', $user, $password);
-				echo 'Connection Established...';
+				$db = new PDO('pgsql:host=127.0.0.1;dbname=scriptures', $user, $password);
+				echo 'Connection Established...1';
 				echo '<br/><br/>';
 			}
 			catch (PDOException $ex)
@@ -63,26 +59,16 @@ foreach ($db->query('SELECT now()') as $row)
 				echo 'Error!: ' . $ex->getMessage();
 				die();
 			}
-			*/
-
-
-
-
-$statement = $db->query('SELECT username, password FROM note_user');
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+			
+foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
 {
-  echo 'user: ' . $row['username'] . ' password: ' . $row['password'] . '<br/>';
+  echo  "<b>" . $row['book'] ." ". $row['chapter'] .":". $row['verse'] ."</b> - ". $row['content'] ;
+
+
+
+  echo '<br/>';
 }
 
-
-/*
-$stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
-$stmt->bindValue(':id', $id, PDO::PARAM_INT);
-$stmt->bindValue(':name', $name, PDO::PARAM_STR);
-$stmt->execute();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-echo 'made it here':
-*/
 
 		?>
 	</body>

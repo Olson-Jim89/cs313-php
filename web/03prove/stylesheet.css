@@ -1,0 +1,67 @@
+h1,h2,h3,h4,h5,h6,p,div{
+	font-family: "Verdana";
+}
+
+body{
+	margin:0px;
+}
+
+header{
+	padding:15px;
+	height:50px;
+	width:100%;
+	background-color:#345252;
+	color:white;
+	position:fixed;
+	z-index:1;
+	
+}
+#logo{
+	margin:0px;
+	display:inline-block;
+	width:80%;
+}
+
+.cartItemsNum{
+	float:right;
+	margin-right:20px;
+	font-size:30pt;
+	font-weight:bold;
+	display:inline-block;
+}
+
+.linkwhite{
+	color:white;
+	text-decoration:none;
+}
+
+.content{
+	position:relative;
+	top:70px;
+
+}
+
+.subHeading{
+	font-size:30pt;
+}
+.SideBlock{
+	float:left;
+	padding-left:5%;
+	width:400px;
+	height:1000px;
+	background-color:#BBC9A1;
+}
+
+.ShoppingItems{
+	float:right;
+	width:1300px;
+	display:inline-block;
+	background-color:light gray;
+}
+
+
+
+.SaleItem{
+	display:inline-block;
+	margin:10px;
+}

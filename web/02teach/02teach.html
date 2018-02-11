@@ -1,19 +1,22 @@
 <html>
 	<head>
 		<title>02 Teach</title>
-		<link rel="stylesheet" type="text/css" href="stylesheet1.css"/>
-		<script src="code.js"><script/>
+		<link rel="stylesheet" type="text/css" href="stylesheet1.css">
+
 	</head>
 	<body>
+		<h1>02 Teach</h1>
 		<div class="box" id="div1">Box One</div>
 		<input id="colorText" type="text" value="green">
-		<input type="button" value="Change Color" onClick="changeColor(document.getElementById('colorText'))">
+		<input id="colorButton" type="button" value="Change Color" onClick="changeColor(document.getElementById('colorText').value)">
 		
 		<div class="box" id="div2">Box Two</div>
 		<div class="box" id="div3">Box Three</div>
-		<input type="button" value="Click Me" onClick="alertCLick()">
+		<input type="button" value="Click Me" onClick="alertClick()">
 		<!--<h1>Hello World!</h1>
 		<input type="button" onClick="document.getElementById('respond').innerHTML = 'Ugh, what an awful place!';" value="Share harsh realites!">
 		<h1 id="respond"></h1>-->
+		<script src="myScript.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</body>
 </html>
