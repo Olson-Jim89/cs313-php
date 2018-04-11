@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portalis - Best of the Web </title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/myScript.js"></script>
+    <script src="/scripts/login.js"></script>
+    <script src="/scripts/portalGen.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />        
+</head>
+
+<body>
+  <header>
+  <h1>Protalis</h1>
+  <div id="status"></div>
+  </header>    
+  <div class="loginbar">
+    <input type="text" id="username" name="username" placeholder="username">|
+	  <input  type="password" id="password" name="password" placeholder="password">
+	  <button onclick="login();">Log in</button>
+    <button onclick="logout();">Log off</button>
+  </div>
+<div class="content">
+<div id="content">
+
+</div>
+
+<ul style="border-right-style: none;">
+  <li><div class="editTools" ><img class="editTools" src="images\add.png" alt="+" onClick="openCatEditWin();" >Click Here To Add a Category</div></li>
+</ul>		
+</div>
+
+<div class="EditWin" id="catEdit">
+  <div class"exitBtn" onClick="exitWin()"style="float:right;cursor: pointer;">X</div>
+  <div id="catAddInputs">
+  <h2>Add Category</h2>
+  <br>
+    <form action="webportal.php" target = "_self" method="post">
+      <label for="catName">Category Name:</label>
+      <input name="catName" type="text">
+      <input  type="submit" value="Add" style="float:right;"/>
+    
+    </form>
+  </div>
+  <div id="catUpdateInputs" style="display:none;">
+  <h2>Update Category</h2>
+  <br>
+    <form action="webportal.php" target = "_self" method="post">
+      <label for="UcatName">Category Name:</label>
+      <input name="UcatName" type="text">
+      <input name="catId" id="formCatId" type="hidden" value"">
+      <input  type="submit" value="Update" style="float:right;">
+    </form>
+  </div>
+</div>
+
+<div class="EditWin" id="linkEdit">
+  <div class"exitBtn" onClick="exitWin()"style="float:right; cursor: pointer;">X</div>
+  <div id="linkAddInputs">
+  <h2>Add Link</h2>
+  <br>
+    <form action="webportal.php" target = "_self" method="post">
+      <label for="linkName">Link Name:</label>
+      <input name="linkName" type="text"><br><br>
+      
+      <label for="linkUrl">link Url:</label>
+      <input name="linkUrl" type="text"><br><br>
+
+      <input name="linkCatId" id="formLinkCatId" type="hidden" value"">
+      <input type="submit" value="Add" style="float:right;"/>
+      
+    </form>
+  </div>
+  <div id="linkUpdateInputs">
+  <h2>Update Link</h2>
+  <br>
+    <form action="webportal.php" target = "_self" method="post">
+      <label for="ulinkName">Link Name:</label>
+      <input name="ulinkName" type="text"><br><br>
+      
+      <label for="ulinkUrl">Link Url:</label>
+      <input name="ulinkUrl" type="text"><br><br>
+
+      <input name="linkId" id="formUpLinkId" type="hidden" value"">
+      <input type="submit" value="Update" style="float:right;"/>
+    </form>
+  </div>
+</div>
+<footer class="footer">
+<button id="editMode" onclick="getServerTime();">Edit Mode: off -</button>
+<p style="display:inline-block;">Portalis Copyright 2018 &copy; by portalis. All Rights Reserved.</p>		
+</footer>
+</body>
+</html>

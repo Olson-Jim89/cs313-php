@@ -1,0 +1,183 @@
+body{
+  color:white;
+  background-color: black;
+  background-image: url("/images/background.jpeg");
+}
+header{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;  
+}
+.content{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-width: 1px;
+  border-color:LightGrey;
+  border-radius: 10px;
+  margin: auto;
+  height: 50%;
+  width: 65%;
+  right: 0px;
+  left: 0px;
+  position: relative;
+  float:right;
+}
+
+.content a:hover{
+  text-decoration: underline;
+}
+
+.content ul {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px;
+  padding-left:40px;
+  padding-right:40px;
+  padding-bottom: 20px;
+  height: 100%;
+  text-align: left;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color:LightGrey;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+
+} 
+.content h3{
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color:LightGrey;
+}
+.content a{
+  text-decoration:none;
+  color:white;
+}
+.editTools{
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:auto;
+  margin-right:auto;
+  display:none;
+  cursor: pointer;
+}
+#editBtn{
+  display: inline;
+  cursor: pointer;
+}
+.EditWin{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: inline-block;    
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  width:400px;
+  height:150px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color:LightGrey;
+  border-radius: 10px;
+  background-color:rgba(75, 75, 75, 0.7);
+  box-shadow: 1px 1px 5px rgb(0, 0, 0);
+  z-index: 10;
+  
+}
+
+button{
+  width: 50px;
+  display: inline-block;
+  border-color: white;
+  color:white;
+  background-color:rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+.EditWin h2{
+  margin: 5px;
+}
+
+.exitBtn{
+  
+  text-align: right;
+  font-weight: bold;
+  
+  
+}
+
+.catEditWin div{
+margin: 30px;
+}
+
+#catEdit{
+  display: none;
+}
+#linkEdit{
+  display: none;
+ 
+
+}
+
+.footer {
+  font-size: 10px;
+  margin: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.footer button{
+  border: none;
+  width: 120px;
+  display: inline;
+  cursor: pointer;
+}
+
+.loginregister{
+  position: fixed;
+  left:0px;
+  right:0px;
+  width:210px;
+  height:525px;
+  padding: 30px;
+  padding-top:0px; 
+  margin: auto;
+  background-color:rgba(158, 158, 158, 0.7);
+  border-style: solid;
+  border-width: 1px;
+  border-color:LightGrey;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0);
+  z-index: 1;
+  text-align: left;
+}
+
+.loginregister input{
+  width:200px;
+  height: 25px;
+  border-radius:5px;
+  border:black; 
+  border-style: solid;
+  border-width: 1px;
+}
+
+.logoff{
+  position: absolute;
+  top: 0;
+  right:0;
+  color: white;
+  text-decoration: none;
+  border: none;
+  width:100px;
+}
+.loginbar{
+  position: absolute;
+  top: 0;
+  right:0;
+  color:black;
+
+}
+.loginbar button{
+  width:60px;
+  border: none;
+}
