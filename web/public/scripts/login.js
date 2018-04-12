@@ -10,6 +10,7 @@ function login() {
 	$.post("/login", params, function(result) {
 		if (result && result.success) {
 			$("#status").text("Successfully logged in.");
+			
 			getportal();
 		} else {
 			$("#status").text("Error logging in.");
@@ -18,30 +19,18 @@ function login() {
 }
 
 function getportal(){
-	
-	$.post("/getportal", function(result) {
-		if (result.rowCount >= 1) {
+	$.post("/getportal", function(categories) {
+		console.log(categories);
+		if (categories) {
 			$("#status").text("portal loaded");	
-				
-				drawPortal(result,1);
+			$("#content").text(categories);	
 		} else {
 			$("#status").text("portal not found");
 		}
 	});
 }
 
-function getlinks(){
-	
-	$.post("/getportal", function(result) {
-		if (result.rowCount >= 1) {
-			$("#status").text("portal loaded");	
-				
-				drawPortal(result,1);
-		} else {
-			$("#status").text("portal not found");
-		}
-	});
-}
+
 
 function logout() {
 	$.post("/logout", function(result) {
@@ -53,16 +42,14 @@ function logout() {
 	});
 }
 
-function getServerTime() {
+function editmode() {
 	$.get("/getServerTime", function(result) {
 		if (result && result.success) {
-            $("#status").text("Server time: " + result.time);
+            $("#status").text("Edit mode");
 			enableEdit();
 			
 		} else {
 			$("#status").text("Got a result back, but it wasn't a success. Your reponse should have had a 401 status code.");
 		}
-	}).fail(function(result) {
-		$("#status").text("Could not get server time.");
 	});
 }

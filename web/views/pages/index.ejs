@@ -5,9 +5,7 @@
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/scripts/myScript.js"></script>
-    <script src="/scripts/login.js"></script>
-    <script src="/scripts/portalGen.js"></script>
+
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />        
 </head>
 
@@ -23,10 +21,9 @@
     <button onclick="logout();">Log off</button>
   </div>
 <div class="content">
-<div id="content">
-
-</div>
-
+  <div id="content">
+    <%- result %>
+  </div>
 <ul style="border-right-style: none;">
   <li><div class="editTools" ><img class="editTools" src="images\add.png" alt="+" onClick="openCatEditWin();" >Click Here To Add a Category</div></li>
 </ul>		
@@ -89,8 +86,11 @@
   </div>
 </div>
 <footer class="footer">
-<button id="editMode" onclick="getServerTime();">Edit Mode: off -</button>
-<p style="display:inline-block;">Portalis Copyright 2018 &copy; by portalis. All Rights Reserved.</p>		
+<button id="editMode" onclick="editmode();">Edit Mode: off -</button>
+<p style="display:inline-block;">Portalis Copyright 2018 &copy; by portalis. All Rights Reserved.</p>	
+<script type="text/javascript" src="/scripts/myScript.js"></script>
+<script src="/scripts/login.js"></script>
+<script src="/scripts/portalGen.js"></script>	
 </footer>
 </body>
 </html>
